@@ -1,0 +1,28 @@
+[project]
+name = "oad"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "David", email = "david@laikar.moe"},
+]
+dependencies = ["toml>=0.10.2", "gitpython>=3.1.44", "click>=8.1.8"]
+requires-python = "==3.13.*"
+readme = "readme.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+[tool.pytest.ini_options]
+pythonpath = [
+  "src"
+]
+
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.4",
+]
